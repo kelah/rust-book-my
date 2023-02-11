@@ -1,30 +1,32 @@
-# The Rust Programming Language
+# Pengaturcaraan Rust
 
 ![Build Status](https://github.com/rust-lang/book/workflows/CI/badge.svg)
 
-This repository contains the source of "The Rust Programming Language" book.
+Repositori ini mengandungi sumber kepada buku "Pengaturcaraan Rust".
 
-[The book is available in dead-tree form from No Starch Press][nostarch].
+
+[Buku ini tersedia dalam format dead-tree dari No Starch Press][nostarch].
 
 [nostarch]: https://nostarch.com/rust-programming-language-2nd-edition
 
-You can also read the book for free online. Please see the book as shipped with
-the latest [stable], [beta], or [nightly] Rust releases. Be aware that issues
-in those versions may have been fixed in this repository already, as those
-releases are updated less frequently.
+Anda juga boleh membaca buku ini secara percuma dalam talian. Sila rujuk kepada 
+buku terbitan terkini [stable], [beta], atau [nightly] Rust. Perlu diingat
+bahawa isu-isu di dalam versi-versi tersebut mungkin telah diperbetulkan 
+di dalam repositori ini, kerana terbitan tersebut tidak selalu dikemas kini.
 
 [stable]: https://doc.rust-lang.org/stable/book/
 [beta]: https://doc.rust-lang.org/beta/book/
 [nightly]: https://doc.rust-lang.org/nightly/book/
 
-See the [releases] to download just the code of all the code listings that appear in the book.
+Sila lihat [releases] untuk muat turun kod sumber yang digunakan dalam buku ini.
 
 [releases]: https://github.com/rust-lang/book/releases
 
-## Requirements
+## Syarat-syarat
 
-Building the book requires [mdBook], ideally the same version that
-rust-lang/rust uses in [this file][rust-mdbook]. To get it:
+Pengompilan buku ini memerlukan [mdBook], secara idealnya dengan
+menggunakan versi yang sama diguna pakai rust-lang/rust dalam [fail ini][rust-mdbook].
+Untuk mendapatkannya:
 
 [mdBook]: https://github.com/rust-lang-nursery/mdBook
 [rust-mdbook]: https://github.com/rust-lang/rust/blob/master/src/tools/rustbook/Cargo.toml
@@ -33,16 +35,17 @@ rust-lang/rust uses in [this file][rust-mdbook]. To get it:
 $ cargo install mdbook --version <version_num>
 ```
 
-## Building
+## Pengompilan
 
-To build the book, type:
+Untuk mengompil buku ini, taip:
 
 ```bash
 $ mdbook build
 ```
 
-The output will be in the `book` subdirectory. To check it out, open it in
-your web browser.
+Hasil pengompilan akan berada di dalam `book` subdirektori. Sila gunakan 
+pelayar untuk memastikan hasil tersebut.
+
 
 _Firefox:_
 ```bash
@@ -60,46 +63,44 @@ $ Start-Process "chrome.exe" .\book\index.html  # Windows (PowerShell)
 $ start chrome.exe .\book\index.html            # Windows (Cmd)
 ```
 
-To run the tests:
+Untuk melaksanakan ujian:
 
 ```bash
 $ mdbook test
 ```
 
-## Contributing
+## Menyumbang
 
-We'd love your help! Please see [CONTRIBUTING.md][contrib] to learn about the
-kinds of contributions we're looking for.
+Kami mengalu-alukan sumbangan anda! Sila lihat [CONTRIBUTING.md][contrib] untuk mengetahui
+tentang jenis-jenis sumbangan yang kami perlukan.
 
 [contrib]: https://github.com/rust-lang/book/blob/main/CONTRIBUTING.md
 
-Because the book is [printed][nostarch], and because we want
-to keep the online version of the book close to the print version when
-possible, it may take longer than you're used to for us to address your issue
-or pull request.
+Disebabkan buku ini di[cetak][nostarch], dan disebabkan kami mahu kekalkan
+versi dalam talian hampir sama yang mungkin (dengan cetakan), ianya agak memakan
+masa yang lebih lama untuk melayani isu anda atau "pull request".
 
-So far, we've been doing a larger revision to coincide with [Rust
-Editions](https://doc.rust-lang.org/edition-guide/). Between those larger
-revisions, we will only be correcting errors. If your issue or pull request
-isn't strictly fixing an error, it might sit until the next time that we're
-working on a large revision: expect on the order of months or years. Thank you
-for your patience!
+Setakat ini, kami sedang melaksanakan semakan yang lebih besar bertepatan dengan
+[Edisi Rust](https://doc.rust-lang.org/edition-guide/). Diantara revisi besar tersebut, 
+hanya pembetulan kepada kesalahan sahaja akan dibuat. Jikalau isu atau "pull request" anda
+adalah bukannya pembetulan kesalahan, ianya mungkin akan ditangguhkan sehingga revisi besar
+yang berikutnya yang akan mengambil masa beberapa bulan atau tahun. Harap bersabar!
 
-### Translations
+### Terjemahan
 
-We'd love help translating the book! See the [Translations] label to join in
-efforts that are currently in progress. Open a new issue to start working on
-a new language! We're waiting on [mdbook support] for multiple languages
-before we merge any in, but feel free to start!
+Kami mengalu-alukan sumbangan untuk menterjemahkan buku ini!. Rujuk kepada [Translations] label
+untuk menyertai usaha-usaha yang sedang berlansung. Untuk terjehamahan yang baharu, sila buka
+isu baharu untuk memulakan kerja tersebut! Anda boleh teruskan terjemahan itu sementara kami 
+menunggu [mdbook support] untuk pelbagai bahasa sebelum kerja-kerja penggabungan dibuat.
 
 [Translations]: https://github.com/rust-lang/book/issues?q=is%3Aopen+is%3Aissue+label%3ATranslations
 [mdbook support]: https://github.com/rust-lang-nursery/mdBook/issues/5
 
-## Spellchecking
+## Penyemakan Ejaan
 
-To scan source files for spelling errors, you can use the `spellcheck.sh`
-script available in the `ci` directory. It needs a dictionary of valid words,
-which is provided in `ci/dictionary.txt`. If the script produces a false
-positive (say, you used word `BTreeMap` which the script considers invalid),
-you need to add this word to `ci/dictionary.txt` (keep the sorted order for
-consistency).
+Untuk mengibas kesalahan ejaan di dalam fail sumber, `spellcheck.sh` skrip 
+di dalam `ci` direktori boleh digunakan. Ia memerlukan kamus yang terdiri 
+daripada senarai perkataan yang sah, seperti yang disediakan dalam `ci/dictionary.txt`.
+Jika skrip tersebut menghasilkan positif palsu (contoh: perkataan `BTreeMap` adalah 
+tidak sah bagi imbasan skrip), perkataan tersebut perlulah ditambah kepada 
+`ci/dictionary.txt` (susun mengikut aturan supaya kekal konsistent)
